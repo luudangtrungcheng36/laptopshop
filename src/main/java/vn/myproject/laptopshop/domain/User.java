@@ -12,8 +12,8 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+import vn.myproject.laptopshop.service.validator.StrongPassword;
 
 @Entity
 @Table(name = "users")
@@ -29,6 +29,7 @@ public class User {
 
     @NotBlank(message = "Mật khẩu không được để trống")
     @Size(min = 6, message = "Mật khẩu tối thiểu 6 ký tự")
+    @StrongPassword
     private String password;
 
     @NotBlank(message = "Họ tên không được để trống")

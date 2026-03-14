@@ -1,10 +1,20 @@
 package vn.myproject.laptopshop.domain.dto;
 
+import jakarta.validation.constraints.NotBlank;
+import vn.myproject.laptopshop.service.validator.RegisterChecked;
+
+@RegisterChecked
 public class RegisterDTO {
     private String firstName;
     private String lastName;
+
+    @NotBlank(message = "Không được để trống")
     private String email;
+
+    @NotBlank(message = "Không được để trống password")
     private String password;
+
+    @NotBlank(message = "Không được để trống Confirm password")
     private String confirmPassword;
 
     public String getFirstName() {

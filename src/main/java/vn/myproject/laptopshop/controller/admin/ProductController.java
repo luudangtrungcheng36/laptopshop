@@ -17,8 +17,6 @@ import vn.myproject.laptopshop.domain.Product;
 import vn.myproject.laptopshop.service.ProductService;
 import vn.myproject.laptopshop.service.UploadService;
 
-import org.springframework.web.bind.annotation.RequestBody;
-
 @Controller
 public class ProductController {
 
